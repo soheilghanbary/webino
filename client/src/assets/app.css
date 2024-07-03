@@ -1,0 +1,84 @@
+@import url('./font.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215.29, 25%, 26.67%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --green: 151.74, 84.7%, 35.88%;
+    --primary: 168.23, 100%, 40.98%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 222.86, 77.78%, 98.24%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 222.86, 77.78%, 98.24%;
+    --muted-foreground: 221.69, 29.06%, 39.8%;
+    --accent: 222.86, 77.78%, 98.24%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 329.88, 100%, 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214.29, 31.82%, 91.37%;
+    --input: 214.29, 31.82%, 91.37%;
+    --ring: 168.23, 100%, 40.98%;
+    --radius: 0.65rem;
+  }
+
+  .dark {
+    --background: 0, 0%, 0%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 198.44, 93.2%, 59.61%;
+    --primary-foreground: 0, 0%, 98.04%;
+    --secondary: 240, 5.88%, 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240, 5.88%, 10%;
+    --muted-foreground: 240, 4.88%, 83.92%;
+    --accent: 240, 5.88%, 10%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 329.88, 100%, 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240, 5.88%, 10%;
+    --input: 240, 5.88%, 10%;
+    --ring: 217.22, 91.22%, 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply box-border select-none border-border outline-none;
+    -webkit-tap-highlight-color: transparent;
+    -moz-font-feature-settings: "ss02";
+    -webkit-font-feature-settings: "ss02";
+    font-feature-settings: "ss02";
+  }
+
+  body {
+    font-family: irsans;
+    overscroll-behavior: contain;
+    @apply text-foreground bg-background h-dvh;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px hsl(var(--card));
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary));
+}

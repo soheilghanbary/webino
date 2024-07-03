@@ -1,0 +1,41 @@
+@font-face {
+  font-family: irsans;
+  font-weight: 300;
+  src: url("./fonts/IRANSansX-Light.woff2");
+}
+
+@font-face {
+  font-family: irsans;
+  font-weight: 400;
+  src: url("./fonts/IRANSansX-Regular.woff2");
+}
+
+@font-face {
+  font-family: irsans;
+  font-weight: 500;
+  src: url("./fonts/IRANSansX-Medium.woff2");
+}
+
+@font-face {
+  font-family: irsans;
+  font-weight: 600;
+  src: url("./fonts/IRANSansX-DemiBold.woff2");
+}
+
+@font-face {
+  font-family: irsans;
+  font-weight: 700;
+  src: url("./fonts/IRANSansX-Bold.woff2");
+}
+
+@font-face {
+  font-family: irsans;
+  font-weight: 800;
+  src: url("./fonts/IRANSansX-ExtraBold.woff2");
+}
+
+@font-face {
+  font-family: irsans;
+  font-weight: 900;
+  src: url("./fonts/IRANSansX-Black.woff2");
+}

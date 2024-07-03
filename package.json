@@ -1,0 +1,32 @@
+{
+  "name": "mockstack",
+  "version": "1.0.0",
+  "main": "server/index.ts",
+  "scripts": {
+    "start:dev": "tsx watch server/index.ts",
+    "dev": "concurrently \"cd client && pnpx vite\" \"tsx watch server/index.ts\"",
+    "build": "pnpm run gen && tsx ./build.ts",
+    "start": "node dist/server.cjs",
+    "push": "prisma db push",
+    "gen": "prisma generate",
+    "std": "prisma studio"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.11.5",
+    "@prisma/client": "5.16.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^8.2.2",
+    "dotenv": "^16.4.5",
+    "hono": "^4.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "esbuild": "^0.23.0",
+    "prisma": "^5.16.1",
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.3"
+  },
+  "prisma": {
+    "schema": "server/db/schema.prisma"
+  }
+}
