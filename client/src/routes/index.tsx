@@ -18,7 +18,7 @@ function IndexPage() {
     <div className="p-8">
       <h1 className="text-center text-2xl font-black">You'r Now use Modern Vite App</h1>
       <Button type="button" onClick={onHandle}>
-        say hello
+        Say Hello
       </Button>
       <div className="rounded-md bg-secondary p-4">
         <pre>{JSON.stringify(data, null, 2)}</pre>

@@ -1,5 +1,5 @@
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
-import react from '@vitejs/plugin-react-swc';
+import react from '@vitejs/plugin-react';
 import path from 'node:path';
 import { defineConfig } from 'vite';
 
@@ -8,6 +8,17 @@ export default defineConfig({
   plugins: [react(), TanStackRouterVite()],
   build: {
     outDir: '../dist',
+    minify: true,
+    cssMinify: true,
+    cssCodeSplit: true,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
+  },
+  optimizeDeps: {
+    include: ['react/jsx-runtime']
   },
   resolve: {
     alias: {
