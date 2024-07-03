@@ -63,7 +63,7 @@
   body {
     font-family: irsans;
     overscroll-behavior: contain;
-    @apply text-foreground bg-background h-dvh;
+    @apply bg-zinc-50 text-foreground antialiased dark:bg-background;
   }
 }
 

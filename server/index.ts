@@ -5,6 +5,7 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { authRoute } from "./routes/auth";
+import { categoryRoute } from "./routes/category";
 config();
 
 // initalize application
@@ -14,6 +15,7 @@ const app = new Hono();
 const apiRoutes = app
   .basePath("/api")
   .route("/auth", authRoute)
+  .route('/categories', categoryRoute)
   .get("/hello", (c) => c.json({ msg: "hello world", date: new Date() }));
 
 // middlewares

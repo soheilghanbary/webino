@@ -15,3 +15,24 @@ model User {
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 }
+
+model Site {
+  id         String   @id @default(cuid())
+  name       String
+  url        String
+  logo       String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  category   Category @relation(fields: [categoryId], references: [id])
+  categoryId String
+}
+
+model Category {
+  id         String   @id @default(cuid())
+  name       String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  sites Site[]
+}

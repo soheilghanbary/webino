@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { rpc } from '@server/api';
 import { createFileRoute } from '@tanstack/react-router';
 import { useState } from 'react';
@@ -16,9 +17,9 @@ function IndexPage() {
   return (
     <div className="p-8">
       <h1 className="text-center text-2xl font-black">You'r Now use Modern Vite App</h1>
-      <button type="button" onClick={onHandle}>
+      <Button type="button" onClick={onHandle}>
         say hello
-      </button>
+      </Button>
       <div className="rounded-md bg-secondary p-4">
         <pre>{JSON.stringify(data, null, 2)}</pre>
       </div>
